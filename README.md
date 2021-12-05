@@ -1,6 +1,6 @@
 # Spark Projet - ESGI 2022
 
-By **Maxime d'Harboullé** and **Julien Da Corte** (5AL1)
+By **<a href="https://github.com/anonymax25">Maxime d'Harboullé</a> and** and **Julien Da Corte** (5AL1)
 
 ## Prerequisites
 
