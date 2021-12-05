@@ -1,18 +1,11 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StringType
-from pyspark.sql.window import Window
-from pyspark.sql.functions import col, log, month, to_timestamp, udf, when, desc, sum, dense_rank, lit, to_date, from_unixtime, unix_timestamp
+from pyspark.sql.functions import col, to_timestamp
 
-from datetime import date, datetime, timedelta
-from dateutil.relativedelta import relativedelta
-
-def six_months_ago():
-    return date.today() + relativedelta(months=-6)
-
+from datetime import datetime, timedelta
 
 spark = SparkSession \
     .builder \
-    .appName("TP3-bis") \
+    .appName("Projet-Q3") \
     .master("local[*]") \
     .getOrCreate()
 

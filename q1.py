@@ -1,11 +1,9 @@
 from pyspark.sql import SparkSession
-from pyspark.sql.types import StringType
-from pyspark.sql.window import Window
-from pyspark.sql.functions import col, udf, when, desc, sum, dense_rank, lit
+from pyspark.sql.functions import col
 
 spark = SparkSession \
     .builder \
-    .appName("TP3-bis") \
+    .appName("Projet-Q1") \
     .master("local[*]") \
     .getOrCreate()
 
