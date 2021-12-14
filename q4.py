@@ -2,8 +2,7 @@ import time
 start_time = time.time()
 
 from pyspark.sql import SparkSession
-from pyspark.sql.functions import col, to_timestamp, udf, explode, split, lit
-from pyspark.sql.types import StringType
+from pyspark.sql.functions import col, explode, split, lower
 
 
 spark = SparkSession \
@@ -22,14 +21,9 @@ commits_df = spark.read.format("csv") \
     .option("header", "true") \
     .load(commits_file)
 
-def str_func(word):
-    return "-" + str(word) + "-"
-
-str_col = udf(str_func, StringType())
-
-
 commits_df.where(col("message").isNotNull()) \
     .select(explode(split("message", " ")).alias("words")) \
+    .select(lower(col('words')).alias('words')) \
     .where(col("words").isin(stopwords_rdd.collect()) == False) \
     .groupBy("words") \
     .count() \
