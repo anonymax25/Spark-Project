@@ -56,5 +56,18 @@ $ python q3.py
 ### Question 4
 ```bash
 $ python q4.py
-#Work in progress @juju :)
++-------+------+                                                                
+|  words| count|
++-------+------+
+|    fix|475785|
+|    add|465963|
+|  merge|302980|
+| remove|260543|
+|request|144940|
+| update|141230|
+|   pull|140033|
+|support|129746|
+|   test|109820|
+|   make|109382|
++-------+------+
 ```
