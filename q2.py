@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col
 
@@ -21,3 +24,5 @@ commits_df.filter(commits_df.repo == "apache/spark") \
     .filter(commits_df.author.isNotNull()) \
     .limit(1) \
     .show()
+
+print("--- " + str((time.time() - start_time)) +  " secondes ---")
