@@ -8,9 +8,8 @@ By **<a href="https://github.com/anonymax25">Maxime d'Harboullé</a> and** and *
 - Get the dataset <a href="https://www.kaggle.com/dhruvildave/github-commit-messages-dataset/version/3">here</a> and place it in the data folder as so: ```data/full.csv```
 
 ## Expected outputs
-### Question 1
 ```bash
-$ python q1.py
+$ python main.py
 
 +--------------------+-------+                                                  
 |                repo|commits|
@@ -26,36 +25,21 @@ $ python q1.py
 |       opencv/opencv|  25772|
 |microsoft/TypeScript|  22017|
 +--------------------+-------+
-```
-
-### Question 2
-```bash
-$ python q2.py
 
 +--------------------+-------+                                                  
 |              author|commits|
 +--------------------+-------+
 |Matei Zaharia <ma...|    683|
 +--------------------+-------+
-```
-### Question 3 
-*settings on 2 years instead of 6 months for demo purposes*
-```bash
-$ python q3.py
 
 +--------------------+-------+                                                  
 |              author|commits|
 +--------------------+-------+
-|Yuming Wang <yumw...|      2|
 |Dongjoon Hyun <do...|      2|
 |Sean Owen <srowen...|      1|
 |Wenchen Fan <wenc...|      1|
 +--------------------+-------+
-```
 
-### Question 4
-```bash
-$ python q4.py
 +-------+------+                                                                
 |  words| count|
 +-------+------+
@@ -70,4 +54,6 @@ $ python q4.py
 |   test|109820|
 |   make|109382|
 +-------+------+
+
+--- 96.78885769844055 secondes ---
 ```
