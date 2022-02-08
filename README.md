@@ -1,16 +1,18 @@
 # Spark Projet - ESGI 2022
 
-By **<a href="https://github.com/anonymax25">Maxime d'Harboullé</a> and** and **Julien Da Corte** (5AL1)
+By **[Maxime d'Harboullé](https://github.com/anonymax25")** and **[Julien Da Corte](https://github.com/Juliien)** (5AL1)
 
 ## Prerequisites
 
 - Have spark, pyspark and python
-- Get the dataset <a href="https://www.kaggle.com/dhruvildave/github-commit-messages-dataset/version/3">here</a> and place it in the data folder as so: ```data/full.csv```
+- Get the dataset [here](https://www.kaggle.com/dhruvildave/github-commit-messages-dataset/version/3) and place it in the data folder as so: ```data/full.csv```
 
 ## Expected outputs
+
 ```bash
 $ python main.py
 
+Question 1                                                                      
 +--------------------+-------+                                                  
 |                repo|commits|
 +--------------------+-------+
@@ -26,12 +28,14 @@ $ python main.py
 |microsoft/TypeScript|  22017|
 +--------------------+-------+
 
+Question 2
 +--------------------+-------+                                                  
 |              author|commits|
 +--------------------+-------+
 |Matei Zaharia <ma...|    683|
 +--------------------+-------+
 
+Question 3
 +--------------------+-------+                                                  
 |              author|commits|
 +--------------------+-------+
@@ -40,6 +44,7 @@ $ python main.py
 |Wenchen Fan <wenc...|      1|
 +--------------------+-------+
 
+Question 4
 +-------+------+                                                                
 |  words| count|
 +-------+------+
@@ -55,5 +60,5 @@ $ python main.py
 |   make|109382|
 +-------+------+
 
---- 96.78885769844055 secondes ---
+--- 105.15760445594788 secondes ---
 ```

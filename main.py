@@ -28,6 +28,7 @@ commits_df = spark.read.format("csv") \
 
 
 # Question 1
+print("Question 1")
 commits_df.groupBy("repo") \
     .count().withColumnRenamed("count","commits") \
     .orderBy(col("commits").desc()) \
@@ -36,6 +37,7 @@ commits_df.groupBy("repo") \
     .show()
 
 # Question 2
+print("Question 2")
 commits_df.filter(commits_df.repo == "apache/spark") \
     .groupBy("author") \
     .count().withColumnRenamed("count","commits") \
@@ -45,6 +47,7 @@ commits_df.filter(commits_df.repo == "apache/spark") \
     .show()
 
 # Question 3
+print("Question 3")
 six_months_ago = (datetime.today() - timedelta(days=365//2)).strftime(format='%Y-%m-%d')
 two_years_ago = (datetime.today() - timedelta(days=365*2)).strftime(format='%Y-%m-%d')
 today = datetime.today().strftime(format='%Y-%m-%d')
@@ -59,6 +62,7 @@ commits_df.filter((commits_df.repo == "apache/spark") & (commits_df.author.isNot
     .show()
 
 # Question 4
+print("Question 4")
 commits_df.where(col("message").isNotNull()) \
     .select(explode(split("message", " ")).alias("words")) \
     .select(lower(col('words')).alias('words')) \
@@ -70,3 +74,5 @@ commits_df.where(col("message").isNotNull()) \
     .show()
 
 print("--- " + str((time.time() - start_time)) +  " secondes ---")
+
+time.sleep(1000)
