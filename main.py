@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 spark = SparkSession \
     .builder \
-    .appName("Projet-Q4") \
+    .appName("Projet Spark") \
     .master("local[*]") \
     .getOrCreate()
 
@@ -75,4 +75,4 @@ commits_df.where(col("message").isNotNull()) \
 
 print("--- " + str((time.time() - start_time)) +  " secondes ---")
 
-time.sleep(1000)
+time.sleep(1000000)
